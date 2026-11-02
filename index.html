@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Senior Mobile Developer & Visual Designer</title>
+    <title>Sarthak Patel | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
@@ -31,16 +31,6 @@
             background-color: #0f1115;
             color: #e2e8f0;
         }
-        .gradient-text-dev {
-            background: linear-gradient(to right, #60a5fa, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gradient-text-design {
-            background: linear-gradient(to right, #f472b6, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
         .glass-nav {
             background: rgba(15, 17, 21, 0.8);
             backdrop-filter: blur(12px);
@@ -53,6 +43,15 @@
         .hover-lift:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+        /* Timeline styling */
+        .timeline-line {
+            position: absolute;
+            left: 11px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #334155;
         }
     </style>
 </head>
@@ -70,12 +69,12 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="#about" class="hover:text-white text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#experience" class="hover:text-white text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
                         <a href="#engineering" class="hover:text-dev text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Engineering</a>
                         <a href="#design" class="hover:text-design text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Design</a>
-                        <a href="#contact" class="bg-white text-black hover:bg-gray-200 px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-xl">Let's Talk</a>
+                        <a href="#contact" class="bg-white text-black hover:bg-gray-200 px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-xl">Contact</a>
                     </div>
                 </div>
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -83,49 +82,38 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-darkcard border-b border-gray-800 absolute w-full">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div id="mobile-menu" class="hidden md:hidden bg-darkcard border-b border-gray-800 absolute w-full z-40">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-xl">
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Experience</a>
                 <a href="#engineering" class="block px-3 py-2 rounded-md text-base font-medium text-dev hover:bg-gray-800">Engineering</a>
                 <a href="#design" class="block px-3 py-2 rounded-md text-base font-medium text-design hover:bg-gray-800">Design</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800 mt-4 text-center">Let's Talk</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800 mt-4 text-center">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="about" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative flex flex-col justify-center min-h-[90vh]">
-        <!-- Decorative elements -->
-        <div class="absolute top-1/4 -left-20 w-72 h-72 bg-dev rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob"></div>
-        <div class="absolute top-1/3 -right-20 w-72 h-72 bg-design rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute top-1/4 -left-20 w-72 h-72 bg-dev rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
+        <div class="absolute top-1/3 -right-20 w-72 h-72 bg-design rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
 
         <div class="relative z-10">
-            <div class="inline-flex items-center space-x-2 bg-gray-800/50 rounded-full px-4 py-2 mb-6 border border-gray-700/50">
-                <span class="flex h-2 w-2 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                </span>
-                <span class="text-sm font-medium text-gray-300">Available for freelance opportunities</span>
-            </div>
-            
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 leading-tight">
                 Building <span class="font-serif italic text-gray-400 font-light">systems.</span><br>
                 Crafting <span class="font-serif italic text-gray-400 font-light">brands.</span>
             </h1>
             
             <p class="mt-6 text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
-                I am a <span class="text-white font-medium">Senior Mobile Developer</span> specializing in scalable architecture, and a <span class="text-white font-medium">Visual Designer</span> dedicated to memorable brand identities.
+                I am <span class="text-white font-medium">Sarthak Patel</span>, a <span class="text-white font-medium">Senior Mobile Developer</span> specializing in scalable architecture (Flutter/iOS), and a <span class="text-white font-medium">Visual Designer</span> dedicated to memorable brand identities.
             </p>
 
             <div class="mt-10 flex flex-wrap gap-4">
                 <a href="#engineering" class="flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-transparent border border-gray-700 rounded-full text-white hover:border-dev hover:text-dev transition-all duration-300 group">
-                    View Engineering 
-                    <i class="fas fa-arrow-down transform group-hover:translate-y-1 transition-transform"></i>
+                    View Engineering <i class="fas fa-arrow-down transform group-hover:translate-y-1 transition-transform"></i>
                 </a>
                 <a href="#design" class="flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-transparent border border-gray-700 rounded-full text-white hover:border-design hover:text-design transition-all duration-300 group">
-                    View Design 
-                    <i class="fas fa-palette transform group-hover:scale-110 transition-transform"></i>
+                    View Design <i class="fas fa-palette transform group-hover:scale-110 transition-transform"></i>
                 </a>
             </div>
         </div>
@@ -134,80 +122,173 @@
     <!-- Divider -->
     <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent opacity-50"></div>
 
-    <!-- Section 1: Engineering & Architecture -->
-    <section id="engineering" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="mb-16 md:flex md:items-end md:justify-between">
-            <div class="max-w-2xl">
-                <h2 class="text-sm font-bold tracking-widest text-dev uppercase mb-3">01 // Engineering & Architecture</h2>
-                <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Robust Mobile<br>Solutions</h3>
-                <p class="text-lg text-gray-400">With over 7+ years of dedicated experience in Flutter and iOS development, I architect mobile applications that are scalable, maintainable, and performant. Specializing in complex state management and enterprise-grade CI/CD pipelines.</p>
-            </div>
-            <div class="mt-8 md:mt-0 flex flex-wrap gap-2 max-w-sm justify-start md:justify-end">
-                <span class="px-4 py-2 bg-dev/10 text-dev rounded-full text-sm font-medium border border-dev/20">Flutter</span>
-                <span class="px-4 py-2 bg-dev/10 text-dev rounded-full text-sm font-medium border border-dev/20">iOS / Swift</span>
-                <span class="px-4 py-2 bg-dev/10 text-dev rounded-full text-sm font-medium border border-dev/20">Dart Extensions</span>
-                <span class="px-4 py-2 bg-dev/10 text-dev rounded-full text-sm font-medium border border-dev/20">GetX</span>
-                <span class="px-4 py-2 bg-dev/10 text-dev rounded-full text-sm font-medium border border-dev/20">BloC</span>
-                <span class="px-4 py-2 bg-dev/10 text-dev rounded-full text-sm font-medium border border-dev/20">Azure DevOps CI/CD</span>
-            </div>
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="mb-16">
+            <h2 class="text-sm font-bold tracking-widest text-gray-400 uppercase mb-3">01 // Career</h2>
+            <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Work Experience</h3>
         </div>
 
-        <!-- Featured Project -->
-        <div class="bg-darkcard rounded-3xl p-6 md:p-12 border border-gray-800 hover-lift relative overflow-hidden group">
-            <!-- Accent glow -->
-            <div class="absolute -top-24 -right-24 w-48 h-48 bg-dev rounded-full filter blur-[100px] opacity-10 group-hover:opacity-30 transition-opacity duration-500"></div>
+        <div class="relative pl-8 md:pl-0">
+            <!-- Timeline line -->
+            <div class="timeline-line md:hidden"></div>
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-                <div class="order-2 lg:order-1">
-                    <div class="inline-block px-3 py-1 bg-gray-800 rounded-lg text-xs font-semibold text-gray-300 mb-4 border border-gray-700 uppercase tracking-wider">Featured Project</div>
-                    <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">Private Client Servicing</h4>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        A comprehensive mobile solution designed for CAs and financial institutions. Engineered with custom Dart extensions for heavy data parsing, integrated with a secure backend via Azure API Management, and structured using an advanced GetX architecture to ensure isolated business logic and seamless UI updates across hundreds of screens.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start text-gray-300">
-                            <i class="fas fa-check text-dev mt-1 mr-3"></i>
-                            <span>Implemented offline-first caching for real-time ledger viewing.</span>
-                        </li>
-                        <li class="flex items-start text-gray-300">
-                            <i class="fas fa-check text-dev mt-1 mr-3"></i>
-                            <span>Automated testing & deployment pipelines using Azure DevOps.</span>
-                        </li>
-                        <li class="flex items-start text-gray-300">
-                            <i class="fas fa-check text-dev mt-1 mr-3"></i>
-                            <span>Reduced state-rebuild lag by 60% with granular GetX controllers.</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="inline-flex items-center text-white hover:text-dev font-medium transition-colors">
-                        View Technical Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                    </a>
+            <div class="space-y-12 md:space-y-8">
+                <!-- BDO India -->
+                <div class="relative md:grid md:grid-cols-4 md:gap-8 items-start">
+                    <div class="absolute -left-10 mt-1.5 w-6 h-6 rounded-full bg-darkbg border-4 border-dev md:hidden z-10"></div>
+                    <div class="md:text-right text-gray-400 mb-2 md:mb-0 pt-1 font-medium">
+                        Feb 2024 &mdash; Present
+                    </div>
+                    <div class="md:col-span-3 bg-darkcard p-6 md:p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-colors">
+                        <h4 class="text-xl font-bold text-white mb-1">Senior Software Developer</h4>
+                        <h5 class="text-lg text-dev mb-4">BDO India</h5>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Currently leading the development of the <strong>Private Client Servicing</strong> project. Architecting highly scalable mobile solutions using Flutter, focusing on performance optimization, complex state management, and seamless integrations.
+                        </p>
+                    </div>
                 </div>
-                
-                <div class="order-1 lg:order-2 rounded-2xl overflow-hidden bg-gray-800 aspect-video relative flex items-center justify-center border border-gray-700/50">
-                    <!-- Placeholder for App Image -->
-                    <div class="absolute inset-0 bg-gradient-to-tr from-gray-900 to-gray-800"></div>
-                    <img src="https://placehold.co/800x600/1a1d24/3b82f6?text=Mobile+App+Dashboard+Mockup" alt="App Dashboard Mockup" class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 rounded-xl relative z-10 p-4" />
+
+                <!-- Agile Infoways -->
+                <div class="relative md:grid md:grid-cols-4 md:gap-8 items-start">
+                    <div class="absolute -left-10 mt-1.5 w-6 h-6 rounded-full bg-darkbg border-4 border-gray-600 md:hidden z-10"></div>
+                    <div class="md:text-right text-gray-400 mb-2 md:mb-0 pt-1 font-medium">
+                        July 2021 &mdash; Feb 2024
+                    </div>
+                    <div class="md:col-span-3 bg-darkcard p-6 md:p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-colors">
+                        <h4 class="text-xl font-bold text-white mb-1">Senior Software Developer</h4>
+                        <h5 class="text-lg text-gray-300 mb-4">Agile Infoways</h5>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Designed and developed robust applications in Flutter and iOS. Delivered critical projects on tight timelines, managed client communication, and provided technical training and assessment for junior developers. Released multiple top-tier applications on App Stores.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- byPeople Technologies -->
+                <div class="relative md:grid md:grid-cols-4 md:gap-8 items-start">
+                    <div class="absolute -left-10 mt-1.5 w-6 h-6 rounded-full bg-darkbg border-4 border-gray-600 md:hidden z-10"></div>
+                    <div class="md:text-right text-gray-400 mb-2 md:mb-0 pt-1 font-medium">
+                        Dec 2018 &mdash; June 2021
+                    </div>
+                    <div class="md:col-span-3 bg-darkcard p-6 md:p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-colors">
+                        <h4 class="text-xl font-bold text-white mb-1">Software Developer</h4>
+                        <h5 class="text-lg text-gray-300 mb-4">byPeople Technologies</h5>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Spearheaded the design and development of end-to-end mobile applications (Flutter & iOS). Key responsibilities included bug-solving, releasing to App Stores, and ensuring all deliverables met client expectations for performance and usability.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Divider -->
-    <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent opacity-50"></div>
+    <!-- Section 2: Engineering -->
+    <section id="engineering" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-900/30 rounded-3xl border border-gray-800/50">
+        <div class="mb-16 md:flex md:items-end md:justify-between">
+            <div class="max-w-2xl">
+                <h2 class="text-sm font-bold tracking-widest text-dev uppercase mb-3">02 // Engineering</h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Featured Projects</h3>
+                <p class="text-lg text-gray-400">A comprehensive collection of robust mobile applications built over the last 7+ years using Flutter and iOS technologies, integrating complex architectures and advanced state management.</p>
+            </div>
+            <div class="mt-8 md:mt-0 flex flex-wrap gap-2 max-w-sm justify-start md:justify-end">
+                <span class="px-3 py-1 bg-dev/10 text-dev rounded-full text-xs font-medium border border-dev/20">Flutter</span>
+                <span class="px-3 py-1 bg-dev/10 text-dev rounded-full text-xs font-medium border border-dev/20">iOS/Swift</span>
+                <span class="px-3 py-1 bg-dev/10 text-dev rounded-full text-xs font-medium border border-dev/20">Firebase</span>
+                <span class="px-3 py-1 bg-dev/10 text-dev rounded-full text-xs font-medium border border-dev/20">Azure CI/CD</span>
+            </div>
+        </div>
 
-    <!-- Section 2: Graphic Design & Branding -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Project 1 -->
+            <div class="bg-darkcard p-6 rounded-2xl border border-gray-800 hover-lift group">
+                <div class="text-xs font-semibold text-dev mb-2 uppercase tracking-wider">BDO India</div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-dev transition-colors">Private Client Servicing</h4>
+                <p class="text-gray-400 text-sm mb-4">Ongoing enterprise-level mobile solution tailored for complex financial management and client servicing workflows.</p>
+                <div class="flex gap-2 text-xs text-gray-500"><span class="bg-gray-800 px-2 py-1 rounded">Flutter</span><span class="bg-gray-800 px-2 py-1 rounded">Architecture</span></div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="bg-darkcard p-6 rounded-2xl border border-gray-800 hover-lift group">
+                <div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Social / Medical</div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-dev transition-colors">MedBound</h4>
+                <p class="text-gray-400 text-sm mb-4">A dedicated social networking application designed specifically for the medical community to connect and share knowledge.</p>
+                <div class="flex gap-2 text-xs text-gray-500"><span class="bg-gray-800 px-2 py-1 rounded">Flutter</span><span class="bg-gray-800 px-2 py-1 rounded">Firebase</span></div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-darkcard p-6 rounded-2xl border border-gray-800 hover-lift group">
+                <div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Lifestyle / F&B</div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-dev transition-colors">The Wine Network</h4>
+                <p class="text-gray-400 text-sm mb-4">Dual application system (Member and Restaurant) facilitating premium wine networking and restaurant reservations.</p>
+                <div class="flex gap-2 text-xs text-gray-500"><span class="bg-gray-800 px-2 py-1 rounded">Flutter</span><span class="bg-gray-800 px-2 py-1 rounded">Maps API</span></div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bg-darkcard p-6 rounded-2xl border border-gray-800 hover-lift group">
+                <div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Real Estate</div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-dev transition-colors">Doors Open Connect</h4>
+                <p class="text-gray-400 text-sm mb-4">Comprehensive real estate platform streamlining property discovery, agent connectivity, and listings.</p>
+                <div class="flex gap-2 text-xs text-gray-500"><span class="bg-gray-800 px-2 py-1 rounded">Flutter</span><span class="bg-gray-800 px-2 py-1 rounded">REST APIs</span></div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="bg-darkcard p-6 rounded-2xl border border-gray-800 hover-lift group">
+                <div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Health & Wellness</div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-dev transition-colors">OstoBuddy</h4>
+                <p class="text-gray-400 text-sm mb-4">Ostomy management application helping patients track supplies, output, and maintain their overall wellness.</p>
+                <div class="flex gap-2 text-xs text-gray-500"><span class="bg-gray-800 px-2 py-1 rounded">Flutter</span><span class="bg-gray-800 px-2 py-1 rounded">Local Storage</span></div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="bg-darkcard p-6 rounded-2xl border border-gray-800 hover-lift group">
+                <div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">B2B Networking</div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-dev transition-colors">ConnectInk</h4>
+                <p class="text-gray-400 text-sm mb-4">Business networking tool designed to connect enterprises and streamline professional communications.</p>
+                <div class="flex gap-2 text-xs text-gray-500"><span class="bg-gray-800 px-2 py-1 rounded">Flutter</span><span class="bg-gray-800 px-2 py-1 rounded">State Mgmt</span></div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="bg-darkcard p-6 rounded-2xl border border-gray-800 hover-lift group">
+                <div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Enterprise Portfolio</div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-dev transition-colors">ParkStreet</h4>
+                <p class="text-gray-400 text-sm mb-4">Native iOS application for managing vast beverage portfolios, logistics tracking, and back-office solutions.</p>
+                <div class="flex gap-2 text-xs text-gray-500"><span class="bg-gray-800 px-2 py-1 rounded">iOS</span><span class="bg-gray-800 px-2 py-1 rounded">Swift</span></div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="bg-darkcard p-6 rounded-2xl border border-gray-800 hover-lift group">
+                <div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Healthcare</div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-dev transition-colors">PocketRehab</h4>
+                <p class="text-gray-400 text-sm mb-4">Recovery assistance app providing users with sobriety tracking, community support, and critical resources.</p>
+                <div class="flex gap-2 text-xs text-gray-500"><span class="bg-gray-800 px-2 py-1 rounded">iOS</span><span class="bg-gray-800 px-2 py-1 rounded">CoreData</span></div>
+            </div>
+
+            <!-- Project 9 -->
+            <div class="bg-darkcard p-6 rounded-2xl border border-gray-800 hover-lift group">
+                <div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">E-Commerce</div>
+                <h4 class="text-xl font-bold text-white mb-2 group-hover:text-dev transition-colors">Swan+</h4>
+                <p class="text-gray-400 text-sm mb-4">Customer loyalty platform native iOS app driving retention through rewards, points, and targeted offers.</p>
+                <div class="flex gap-2 text-xs text-gray-500"><span class="bg-gray-800 px-2 py-1 rounded">iOS</span><span class="bg-gray-800 px-2 py-1 rounded">Swift</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent opacity-50 my-12"></div>
+
+    <!-- Section 3: Graphic Design & Branding -->
     <section id="design" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="mb-16 md:flex md:items-end md:justify-between">
             <div class="max-w-2xl">
-                <h2 class="text-sm font-bold tracking-widest text-design uppercase mb-3">02 // Graphic Design & Branding</h2>
+                <h2 class="text-sm font-bold tracking-widest text-design uppercase mb-3">03 // Graphic Design & Branding</h2>
                 <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Visual Identity <br>Creation</h3>
                 <p class="text-lg text-gray-400">Beyond code, I craft compelling visual narratives. Utilizing advanced Canva techniques and industry-standard design principles, I develop bespoke branding, custom templates, and product graphics that help businesses stand out in crowded markets.</p>
             </div>
             <div class="mt-8 md:mt-0 flex flex-wrap gap-2 max-w-sm justify-start md:justify-end">
-                <span class="px-4 py-2 bg-design/10 text-design rounded-full text-sm font-medium border border-design/20">Canva Mastery</span>
-                <span class="px-4 py-2 bg-design/10 text-design rounded-full text-sm font-medium border border-design/20">Logo Creation</span>
+                <span class="px-4 py-2 bg-design/10 text-design rounded-full text-sm font-medium border border-design/20">Canva Pro</span>
+                <span class="px-4 py-2 bg-design/10 text-design rounded-full text-sm font-medium border border-design/20">Logo Design</span>
                 <span class="px-4 py-2 bg-design/10 text-design rounded-full text-sm font-medium border border-design/20">Social Media Kits</span>
-                <span class="px-4 py-2 bg-design/10 text-design rounded-full text-sm font-medium border border-design/20">E-commerce Assets</span>
+                <span class="px-4 py-2 bg-design/10 text-design rounded-full text-sm font-medium border border-design/20">Templates</span>
             </div>
         </div>
 
@@ -218,30 +299,30 @@
                 
                 <div class="relative z-10 mb-8">
                     <div class="inline-block px-3 py-1 bg-gray-800 rounded-lg text-xs font-semibold text-gray-300 mb-4 border border-gray-700 uppercase tracking-wider">Showcase</div>
-                    <h4 class="text-2xl font-bold text-white mb-3">Vani Jewels</h4>
+                    <h4 class="text-2xl font-bold text-white mb-3">Vani Jewels Branding</h4>
                     <p class="text-gray-400 max-w-lg">
-                        End-to-end visual identity for luxury online retailers. From elegant logo typography to cohesive social media templates and high-conversion product graphic overlays designed directly in Canva.
+                        End-to-end visual identity for luxury online retailers. From elegant logo typography to cohesive social media templates and high-conversion product graphic overlays designed entirely in Canva Pro.
                     </p>
                 </div>
                 
                 <div class="relative z-10 w-full h-64 rounded-xl overflow-hidden mt-auto">
-                    <img src="https://placehold.co/800x400/1a1d24/ec4899?text=Luxury+Brand+Moodboard" alt="Jewelry Branding Moodboard" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                    <img src="https://placehold.co/800x400/1a1d24/ec4899?text=Vani+Jewels+Brand+Board" alt="Jewelry Branding Moodboard" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
                 </div>
             </div>
 
             <!-- Smaller Design Cards -->
             <div class="flex flex-col gap-6">
-                <div class="bg-darkcard rounded-3xl p-6 border border-gray-800 hover-lift group relative overflow-hidden flex-1">
+                <div class="bg-darkcard rounded-3xl p-6 border border-gray-800 hover-lift group relative overflow-hidden flex-1 flex flex-col">
                     <h4 class="text-xl font-bold text-white mb-2 relative z-10">Custom Templates</h4>
-                    <p class="text-sm text-gray-400 mb-4 relative z-10">Scalable Canva template systems for marketing teams.</p>
+                    <p class="text-sm text-gray-400 mb-4 relative z-10">Scalable Canva template systems for marketing teams and social media grids.</p>
                     <div class="w-full h-32 rounded-lg overflow-hidden mt-auto relative z-10">
-                        <img src="https://placehold.co/400x300/2d3748/f472b6?text=Social+Media+Grid" alt="Social Templates" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                        <img src="https://placehold.co/400x300/2d3748/f472b6?text=Template+System" alt="Social Templates" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
                     </div>
                 </div>
                 
-                <div class="bg-darkcard rounded-3xl p-6 border border-gray-800 hover-lift group relative overflow-hidden flex-1">
+                <div class="bg-darkcard rounded-3xl p-6 border border-gray-800 hover-lift group relative overflow-hidden flex-1 flex flex-col">
                     <h4 class="text-xl font-bold text-white mb-2 relative z-10">Logo Design</h4>
-                    <p class="text-sm text-gray-400 mb-4 relative z-10">Minimalist, impactful typography and marks.</p>
+                    <p class="text-sm text-gray-400 mb-4 relative z-10">Minimalist, impactful typography and marks crafted for modern businesses.</p>
                     <div class="w-full h-32 rounded-lg overflow-hidden mt-auto relative z-10">
                         <img src="https://placehold.co/400x300/1f2937/fb7185?text=Logo+Concepts" alt="Logos" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
                     </div>
@@ -256,7 +337,6 @@
     <!-- Contact Section -->
     <section id="contact" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-gradient-to-br from-gray-800/50 to-darkcard rounded-3xl p-8 md:p-16 border border-gray-700 relative overflow-hidden">
-            <!-- Background effects -->
             <div class="absolute top-0 right-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
                 <div class="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] bg-dev rounded-full filter blur-[150px] mix-blend-screen"></div>
                 <div class="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] bg-design rounded-full filter blur-[150px] mix-blend-screen"></div>
@@ -264,26 +344,36 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Let's build something exceptional.</h2>
+                    <h2 class="text-sm font-bold tracking-widest text-gray-400 uppercase mb-3">04 // Let's Connect</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold text-white mb-6">Build something exceptional.</h3>
                     <p class="text-lg text-gray-400 mb-10">Whether you need a robust mobile architecture, a complete rebrand, or a consultation balancing both tech and design—my inbox is open.</p>
                     
                     <div class="space-y-6">
-                        <div class="flex items-center text-gray-300 hover:text-white transition-colors">
-                            <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4 border border-gray-700">
-                                <i class="fas fa-envelope text-gray-400"></i>
+                        <div class="flex items-center text-gray-300 hover:text-white transition-colors group">
+                            <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4 border border-gray-700 group-hover:border-gray-500 transition-colors">
+                                <i class="fas fa-envelope text-gray-400 group-hover:text-white"></i>
                             </div>
                             <div>
                                 <p class="text-sm text-gray-500 uppercase tracking-wide">Email</p>
                                 <a href="mailto:sarthakpatel50@gmail.com" class="text-lg font-medium">sarthakpatel50@gmail.com</a>
                             </div>
                         </div>
-                        <div class="flex items-center text-gray-300 hover:text-white transition-colors">
-                            <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4 border border-gray-700">
-                                <i class="fab fa-linkedin-in text-gray-400"></i>
+                        <div class="flex items-center text-gray-300 hover:text-white transition-colors group">
+                            <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4 border border-gray-700 group-hover:border-gray-500 transition-colors">
+                                <i class="fab fa-linkedin-in text-gray-400 group-hover:text-white"></i>
                             </div>
                             <div>
                                 <p class="text-sm text-gray-500 uppercase tracking-wide">LinkedIn</p>
-                                <a href="https://www.linkedin.com/in/sarthak-patel-080591195" class="text-lg font-medium">/in/sarthak-patel-080591195</a>
+                                <a href="https://www.linkedin.com/in/sarthak-patel-080591195" target="_blank" class="text-lg font-medium">/in/sarthak-patel-080591195</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-300 group">
+                            <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4 border border-gray-700">
+                                <i class="fas fa-map-marker-alt text-gray-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">Location</p>
+                                <span class="text-lg font-medium">Ahmedabad, Gujarat</span>
                             </div>
                         </div>
                     </div>
@@ -294,19 +384,11 @@
                     <form class="space-y-6" onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden'); this.reset();">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Name</label>
-                            <input type="text" id="name" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all" placeholder="John Doe" required>
+                            <input type="text" id="name" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all" placeholder="Enter your name" required>
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email</label>
-                            <input type="email" id="email" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all" placeholder="john@example.com" required>
-                        </div>
-                        <div>
-                            <label for="inquiry" class="block text-sm font-medium text-gray-400 mb-2">Inquiry Type</label>
-                            <select id="inquiry" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all appearance-none">
-                                <option>Mobile Development</option>
-                                <option>Graphic & Brand Design</option>
-                                <option>General Consulting</option>
-                            </select>
+                            <input type="email" id="email" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all" placeholder="Enter your email" required>
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Message</label>
@@ -316,7 +398,7 @@
                             Send Message <i class="fas fa-paper-plane text-sm"></i>
                         </button>
                         <div id="success-msg" class="hidden mt-4 p-3 bg-green-900/30 border border-green-800 rounded-lg text-green-400 text-sm text-center">
-                            Message sent successfully! (Demo)
+                            Thank you! Your message has been sent.
                         </div>
                     </form>
                 </div>
@@ -333,31 +415,17 @@
             <p class="text-gray-500 text-sm text-center md:text-left">
                 &copy; <span id="year"></span> All rights reserved. Designed & Engineered by Sarthak Patel.
             </p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" class="text-gray-500 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-                <a href="#" class="text-gray-500 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
-            </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script>
-        // Set current year
         document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Mobile menu toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on click
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
         menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => menu.classList.add('hidden'));
         });
     </script>
 </body>
